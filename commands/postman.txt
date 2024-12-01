@@ -1,0 +1,4 @@
+
+Spring security default user name is user and we can get the password from terminal. 
+
+http://localhost:8081/api/v1/message?msg=Hello
