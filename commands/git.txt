@@ -1,0 +1,6 @@
+
+git init
+git add .
+git commit -m "First Commit"
+git remote add origin git@github.com:sumitbasu116/Spring-Security-6.git
+git push origin master
