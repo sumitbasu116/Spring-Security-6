@@ -7,11 +7,9 @@
 
 > If we change the client, the session ID will not present, so, we again need to login or authenticate.
 
-```
-Basic Authetication Flow:
-**Client --> Filters [Filter1,Filter2,Spring-Security-Filter,...] --> Dispatcher Servlet --> Controller**
-```
+**Basic Authetication Flow:**
+ Client --> Filters [Filter1,Filter2,Spring-Security-Filter,...] --> Dispatcher Servlet --> Controller
 
 # Authentication of an GET and POST API:
 > To autheticate a GET endpoint, we need to pass only SessionID in the header of that API request from a Client.
-> To verify a POST endpoint, we need to pass SessionID and csrf_token in the header of that API request from a Client.
+> To verify a POST endpoint, we need to pass SessionID and **csrf_token** in the header of that API request from a Client.
