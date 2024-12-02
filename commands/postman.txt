@@ -1,4 +1,6 @@
 
 Spring security default user name is user and we can get the password from terminal. 
+curl --location 'http://localhost:8081/api/v1/message?msg=Hello' \
+--header 'Authorization: Basic <console-password-from-application-log>'
 
-http://localhost:8081/api/v1/message?msg=Hello
+http://localhost:8081/logout
