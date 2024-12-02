@@ -13,3 +13,8 @@
 # Authentication of an GET and POST API:
 > To autheticate a GET endpoint, we need to pass only SessionID in the header of that API request from a Client.
 > To verify a POST endpoint, we need to pass SessionID and **csrf_token** in the header of that API request from a Client.
+
+## Who generates this csrf_token?
+> csrf_token is a hidden field generated at the time of when the SessionID got generated or at the time of authentication. Attacker can get the Session ID as it is visible.
+> However, the csrf_token is a hiddle field in the form, so Attacker can not see it from outside the client machine. This way csrf attack can be prevented for the POST,PUT, DELETE request.
+
