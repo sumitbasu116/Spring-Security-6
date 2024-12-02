@@ -21,3 +21,6 @@
 # Components of Spring Security
 > Filter Chain has Authentication Filter. Authentication Filter has the Security context. Authentication Manager is calling Authentication filter to get the Authentication Provider.
 
+# Security Context
+> The Security Context holds the security information (e.g., authenticated user details) for the current request.
+> It is stored in a thread-local variable and is accessible globally within the request's lifecycle.
