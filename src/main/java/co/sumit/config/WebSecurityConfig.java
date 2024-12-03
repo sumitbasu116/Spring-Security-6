@@ -14,7 +14,9 @@ public class WebSecurityConfig {
     //1.Need a Security Filter chain bean
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-		httpSecurity.authorizeHttpRequests(request->{
+		httpSecurity
+		.csrf(csrf->csrf.disable())//or .csrf(Customizer.withDefaults()) to apply csrf token
+		.authorizeHttpRequests(request->{
 			request.anyRequest().authenticated();
 		}).formLogin(Customizer.withDefaults())
 		.httpBasic(Customizer.withDefaults());
