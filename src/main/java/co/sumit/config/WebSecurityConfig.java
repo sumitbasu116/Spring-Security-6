@@ -17,7 +17,9 @@ public class WebSecurityConfig {
 		httpSecurity
 		.csrf(csrf->csrf.disable())//or .csrf(Customizer.withDefaults()) to apply csrf token
 		.authorizeHttpRequests(request->{
-			request.anyRequest().authenticated();
+			request
+			.requestMatchers("register","login").permitAll()//for registration why user needs to be authenticated?
+			.anyRequest().authenticated();
 		}).formLogin(Customizer.withDefaults())
 		.httpBasic(Customizer.withDefaults());
 		return httpSecurity.build();
