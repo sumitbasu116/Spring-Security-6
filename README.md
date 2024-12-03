@@ -17,6 +17,7 @@
 ## Who generates this csrf_token?
 > csrf_token is a hidden field generated at the time of when the SessionID got generated or at the time of authentication. Attacker can get the Session ID as it is visible.
 > However, the csrf_token is a hiddle field in the form, so Attacker can not see it from outside the client machine. This way csrf attack can be prevented for the POST,PUT, DELETE request.
+> By default Spring Security generates csrf token and expecting it while authenticating POST,PUT,DELETE HTTP requests.
 
 # Components of Spring Security
 > Filter Chain has Authentication Filter. Authentication Filter has the Security context. Authentication Manager is calling Authentication filter to get the Authentication Provider.
