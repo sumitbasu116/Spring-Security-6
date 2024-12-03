@@ -25,3 +25,13 @@
 # Security Context
 > The Security Context holds the security information (e.g., authenticated user details) for the current request.
 > It is stored in a thread-local variable and is accessible globally within the request's lifecycle.
+
+# DB Schema
+```
+CREATE TABLE `user` (
+  `id` int NOT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+```
