@@ -16,7 +16,8 @@ public class WebSecurityConfig {
     SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
 		httpSecurity.authorizeHttpRequests(request->{
 			request.anyRequest().authenticated();
-		}).httpBasic(Customizer.withDefaults());
+		}).formLogin(Customizer.withDefaults())
+		.httpBasic(Customizer.withDefaults());
 		return httpSecurity.build();
 	}
 }
